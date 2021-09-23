@@ -73,5 +73,14 @@ export class Tokenizer {
     if (this.tokenResult[this.indexOfActiveToken].type === 'INVALID') throw new Error(this.errorMessage) 
   }
 
+
+sendEndMessage() {
+  return { 
+    type: 'END', 
+    value: 'END',
+    message: 'You have reached the end of the tokens' 
+  }
+}
+
   
 }
