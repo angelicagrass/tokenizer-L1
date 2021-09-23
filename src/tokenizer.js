@@ -37,5 +37,16 @@ export class Tokenizer {
     return this.tokenResult
   }
 
+  findBestMatchOfTokenValue() {
+
+    if(this.tempArray.length > 0) {
+      this.tempArray.sort((current, next) => next.value.length - current.value.length)
+      this.tokenResult.push(this.tempArray[0])
+      this.tokenizeString = this.tokenizeString.replace(this.tempArray[0].value, '').trim()
+    } else {
+      this.returnErrorObject()
+    }
+  }
+
   
 }
