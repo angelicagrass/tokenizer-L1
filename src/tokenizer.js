@@ -57,5 +57,17 @@ export class Tokenizer {
     this.tokenizeString = ''
   }
 
+  getActiveToken() {
+    return this.tokenResult[this.indexOfActiveToken]
+  }
+  
+  getNextToken() {
+    this.indexOfActiveToken < this.tokenResult.length ? this.indexOfActiveToken++ : this.sendEndMessage()
+  }
+  
+  getPreviousToken() {
+    this.indexOfActiveToken > 0 ? this.indexOfActiveToken-- : this.sendStartMessage()
+  }
+
   
 }
