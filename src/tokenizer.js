@@ -58,10 +58,12 @@ export class Tokenizer {
   }
 
   getActiveToken() {
+    this.checkIfTokenIsValid()
     return this.tokenResult[this.indexOfActiveToken]
   }
   
   getNextToken() {
+
     this.indexOfActiveToken < this.tokenResult.length ? this.indexOfActiveToken++ : this.sendEndMessage()
   }
   
