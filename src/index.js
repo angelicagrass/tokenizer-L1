@@ -1,7 +1,12 @@
 import { Tokenizer } from './tokenizer.js'
 import { regex } from './testRegex.js'
+import { Grammar } from './grammar.js'
 
-const TheTokenizer = new Tokenizer(regex, '3.15 5 8 9 10 100 hallå 4 5 6 7 8 9')
+
+let NewRegex = new Grammar('WORD', /^[\w|ÅÄÖåäö]+/g )
+NewRegex = NewRegex.createNewGrammar()
+
+const TheTokenizer = new Tokenizer(NewRegex, 'hej här är lite ord som kanske kan fungera')
 
 
 try {
