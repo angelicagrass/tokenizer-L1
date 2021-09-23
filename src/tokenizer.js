@@ -69,5 +69,9 @@ export class Tokenizer {
     this.indexOfActiveToken > 0 ? this.indexOfActiveToken-- : this.sendStartMessage()
   }
 
+  checkIfTokenIsValid() {
+    if (this.tokenResult[this.indexOfActiveToken].type === 'INVALID') throw new Error(this.errorMessage) 
+  }
+
   
 }
