@@ -48,5 +48,14 @@ export class Tokenizer {
     }
   }
 
+  returnErrorObject() {
+    this.tokenResult.push({
+      type: 'INVALID',
+      regex: 'INVALID',
+      value: 'No lexical element matches: ' + this.tokenizeString
+    })
+    this.tokenizeString = ''
+  }
+
   
 }
