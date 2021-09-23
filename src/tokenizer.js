@@ -74,13 +74,19 @@ export class Tokenizer {
   }
 
 
-sendEndMessage() {
-  return { 
-    type: 'END', 
-    value: 'END',
-    message: 'You have reached the end of the tokens' 
+  sendEndMessage() {
+    return { 
+      type: 'END', 
+      value: 'END',
+      message: 'You have reached the end of the tokens' 
+    }
   }
-}
 
-  
+  sendStartMessage() {
+    return { 
+      type: 'START', 
+      value: 'START',
+      message: 'You have reached the startindex of the tokens' 
+    }
+  }
 }
