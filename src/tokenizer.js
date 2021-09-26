@@ -33,7 +33,6 @@ export class Tokenizer {
       })
       this.findBestMatchOfTokenValue()
     }
-    console.log(this.tokenResult)
     return this.tokenResult
   }
 
@@ -55,16 +54,15 @@ export class Tokenizer {
       value: 'No lexical element matches: ' + this.tokenizeString
     })
     this.tokenizeString = ''
+    return this.tokenResult
   }
 
   getActiveToken() {
-    this.checkIfTokenIsValid()
     return this.tokenResult[this.indexOfActiveToken]
   }
   
   getNextToken() {
-
-    this.indexOfActiveToken < this.tokenResult.length ? this.indexOfActiveToken++ : this.sendEndMessage()
+    this.indexOfActiveToken < this.tokenResult.length - 1 ? this.indexOfActiveToken++ : this.sendEndMessage()
   }
   
   getPreviousToken() {
@@ -75,20 +73,23 @@ export class Tokenizer {
     if (this.tokenResult[this.indexOfActiveToken].type === 'INVALID') throw new Error(this.errorMessage) 
   }
 
-
   sendEndMessage() {
-    return { 
+    this.tokenResult = []
+    
+    this.tokenResult.push({ 
       type: 'END', 
       value: 'END',
       message: 'You have reached the end of the tokens' 
-    }
+    }) 
   }
 
   sendStartMessage() {
-    return { 
+    this.tokenResult = []
+    
+    this.tokenResult.push({ 
       type: 'START', 
       value: 'START',
       message: 'You have reached the startindex of the tokens' 
-    }
+    }) 
   }
 }
