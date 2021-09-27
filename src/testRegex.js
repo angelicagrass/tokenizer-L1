@@ -8,6 +8,7 @@ export const regex = [
     REGEX: /^[0-9]+/g , 
   }
 
+  
   // {
   //   TYPE: 'WORD',
   //   REGEX: /^[\w|ÅÄÖåäö]+/g , 
