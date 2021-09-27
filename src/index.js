@@ -2,24 +2,13 @@ import { Tokenizer } from './tokenizer.js'
 import { regex } from './testRegex.js'
 import { Grammar } from './grammar.js'
 
+// EXAMPLE ON HOW TO USE THE TOKENIZER
 
-let NewRegex = new Grammar('WORD', /^[\w|ÅÄÖåäö]+/g )
-NewRegex = NewRegex.createNewGrammar()
+// let NewRegex = new Grammar('WORD', /^[\w|ÅÄÖåäö]+/g )
+// NewRegex = NewRegex.createNewGrammar()
 
-const TheTokenizer = new Tokenizer(NewRegex, 'a')
+// const TheTokenizer = new Tokenizer(NewRegex, 'a string to tokenize')
 
-
-try {
-
-TheTokenizer.setTokenizerRules()
-TheTokenizer.tokenizeTheString()
-TheTokenizer.getPreviousToken()
-console.log(TheTokenizer.getActiveToken().value + ' här är value')
-
-
-} catch (error) {
-  console.log(error)
-  
-}
-
-
+// TheTokenizer.setTokenizerRules()
+// TheTokenizer.tokenizeTheString()
+// TheTokenizer.getPreviousToken()

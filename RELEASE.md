@@ -10,11 +10,11 @@
 ## Egenskattning och mål
   - [ ] Jag är inte klar eftersom jag vet att jag saknar något. Då skall du inte lämna in!
   - [x] Jag eftersträvar med denna inlämning godkänt betyg (E-D)
-    - [ ] De flesta testfall fungerar
-    - [ ] Koden är förberedd på Återanvändning
-    - [ ] All kod samt historik finns i git 
-    - [ ] Kodkvaliterskraven är ifyllda
-    - [ ] Reflektion är skriven
+    - [x] De flesta testfall fungerar
+    - [x] Koden är förberedd på Återanvändning
+    - [x] All kod samt historik finns i git 
+    - [x] Kodkvaliterskraven är ifyllda
+    - [x] Reflektion är skriven
   - [ ] Jag eftersträvar med denna inlämning högre betyg (C-B) och anser mig uppfylla alla extra krav för detta. 
     - [ ] Samtliga testfall är skrivna
     - [ ] Egna testfall för Maximal munch och kantfall
